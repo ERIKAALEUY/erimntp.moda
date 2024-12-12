@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><Erimntp class="Moda"></Erimntp></title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+    <header class="logo-container">
+        <img src="img/logo1.png" alt="Logo" id="logo">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#quien-soy">¿Quién soy?</a></li>
+            <li><a href="#identidad-en-la-moda">Identidad en la moda</a></li>
+            <li><a href="#inspirarse">Inspirarse</a></li>
+        </ul>
+    </nav>
+
+   
+    <section id="inicio" class="carousel-section">
+        <div class="carousel-container">
+            <div class="carousel-images">
+                <img src="img/20.jpg" alt="Imagen 1">
+                <img src="img/30.jpg" alt="Imagen 2">
+                <img src="img/40.jpg" alt="Imagen 3">
+                <img src="img/50.jpg" alt="Imagen 4">
+                <img src="img/60.jpg" alt="Imagen 5">
+                <img src="img/70.jpg" alt="Imagen 6">
+                <img src="img/80.jpg" alt="Imagen 7">
+                <img src="img/90.jpg" alt="Imagen 8">
+                <img src="img/2000.jpg" alt="Imagen 9">
+                <img src="img/2020.jpg" alt="Imagen 10">
+            </div>
+            <span class="prev" onclick="moveSlide(-1)">&#10094;</span>
+            <span class="next" onclick="moveSlide(1)">&#10095;</span>
+        </div>
+    </section>
+  <h2>Los años 40, 50, 60, 70, 80, 90, 2000, 2010, 2020... ¿Qué década sería la tuya?</h2>
+    <script>
+      
+        let currentIndex = 0;
+        const images = document.querySelectorAll(".carousel-images img");
+        const totalImages = images.length;
+
+      
+        function moveSlide(direction) {
+            currentIndex += direction;
+
+            if (currentIndex < 0) {
+                currentIndex = totalImages - 1;
+            }
+
+
+            if (currentIndex >= totalImages) {
+                currentIndex = 0;
+            }
+
+            updateCarousel();
+        }
+
+  
+        function updateCarousel() {
+   
+            const offset = -currentIndex * 100;
+
+
+            document.querySelector(".carousel-images").style.transform = `translateX(${offset}%)`;
+        }
+
+
+        updateCarousel();
+    </script>
+
+    <section class="principal">
+        <h1>Bienvenidas a mi lugar en la web</h1>
+        <h3>La moda soy yo, sos vos</h3>
+        <p>Este es un lugar para todas las chicas que buscan algo fresco, fácil de seguir y, sobre todo, que te haga sentir vos misma.</p>
+        <img src="img/a1.jpg" alt="Imagen de moda A1">
+    </section>
+
+  
+
+ 
+    <section id="quien-soy">
+        <h2>¿Quién soy?</h2>
+        <p>¡Hola! Soy Erika y amo la moda. Siempre estuve conectada con la ropa. Nunca he contado con muchos recursos para acceder a ropa nueva y en tendencia, pero siempre he recurrido a mi creatividad para explorar ideas y hallar nuevas formas de usar esa ropa que tiene años. ¡Te invito a acompañarme, intercambiar opiniones y divertirnos!</p>
+        <p>Siempre estuve rodeada de ropa, tendencias y todo lo que tiene que ver con la moda...</p>
+        <img src="img/a2.jpg" alt="Imagen de Erika y moda A2">
+    </section>
+
+  
+    <section id="identidad-en-la-moda">
+        <h2>Identidad en la moda</h2>
+        <p>La moda es una forma de expresión que nos permite mostrar quiénes somos. A través de la ropa, los accesorios, el maquillaje y el estilo personal, podemos decir mucho sobre nuestra identidad. Es increíble cómo un simple atuendo puede reflejar nuestra personalidad y cómo nos sentimos en un determinado momento.</p>
+        <img src="img/a3.jpg" alt="Imagen de Identidad en la moda A3">
+        <img src="img/a4.jpg" alt="Imagen de Identidad en la moda A4">
+    </section>
+
+    <section id="inspirarse">
+        <h2>Veni, acompáñame, somos amigas...</h2>
+        <p>La amistad se basa en muchas cosas, creo que una de las ventajas principales es que puedes hablar de muchas cosas sin miedo a ser juzgada. La moda también es una forma de expresarnos con nuestras amigas, compartir ideas y estilos.</p>
+        <p>Entonces, contame... ¿Qué opinas de este outfit? ¿Lo usarías?</p>
+        <img src="img/a5.jpg" alt="Imagen de Inspiración A5">
+    </section>
+
+    <h2>¡¡Te dejo mi Instagram y Gmail para que me cuentes!!</h2>
+    <p>@erikaaaleuy</p>
+    <p>erikaaleuy8@gmail.com</p>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
